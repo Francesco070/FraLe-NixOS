@@ -1,2 +1,5 @@
 # FraLe-NixOS
-NixOS von Francesco &amp; Leandro
+
+## Contributors
+Francesco070 &amp; XLordPlatypus
+
