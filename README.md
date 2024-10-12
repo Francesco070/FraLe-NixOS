@@ -5,6 +5,8 @@ Francesco070 &amp; XLordPlatypus
 
 ## Installation
 
+Install NixOS with the Graphical ISO Image.
+
 ```shell
 
 nix-env -iA nixos.git
