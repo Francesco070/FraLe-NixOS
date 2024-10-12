@@ -2,13 +2,17 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
+
+  main-user.enable = true;
+  main-user.userName = "francesco";
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -17,6 +21,8 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -50,6 +56,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable bluetooth
+  hardware.bluetooth.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -76,9 +85,16 @@
     description = "Francesco Palazzo";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-	thunderbird
+	    thunderbird
     ];
   };
+
+  home-manager = {
+    specialArgs = { inherit inputs; };
+    users = {
+      "francesco" = imports ./home.nix;
+    }
+  }
 
   # Install firefox.
   programs.firefox.enable = true;
