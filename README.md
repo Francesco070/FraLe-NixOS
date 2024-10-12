@@ -7,6 +7,8 @@ Francesco070 &amp; XLordPlatypus
 
 Install NixOS with the Graphical ISO Image.
 
+Reboot and then:
+
 ```shell
 
 nix-env -iA nixos.git
