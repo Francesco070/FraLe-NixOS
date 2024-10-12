@@ -1,3 +1,6 @@
 { inputs, lib, config, pkgs, ... }: {
-  services.pipewire.wireplumber.enable = true;
+  services.pipewire = {
+    enable = true;
+    wireplumber.enable = true; 
+  };
 }

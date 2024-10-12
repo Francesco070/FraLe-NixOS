@@ -29,7 +29,7 @@
   let
     inherit (self) outputs;
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = nixpkgs.packages.${system};
     overlay-unstable = final: prev: {
      unstable = import nixpkgs-unstable {
        inherit system;
@@ -46,7 +46,7 @@
         let
           user = "francesco";
           gitName = "Francesco070";
-        in { inherit inputs gitName user vpn; }; # Pass flake inputs to our config
+        in { inherit inputs gitName user; }; # Pass flake inputs to our config
         modules = [
          ({ config, pkgs, ... }: { nixpkgs.overlays = [
          overlay-unstable

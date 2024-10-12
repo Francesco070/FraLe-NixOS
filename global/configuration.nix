@@ -67,6 +67,15 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
+
+  #sound = {
+  #  enable = true;
+  #  pipewire.enable = true;
+  #  pipewire.wireplumber.enable = true;
+  #  hardware.pulseaudio.enable = false;
+  #  security.rtkit.enable = true;
+  #};
+
   programs.zsh.enable = true;
   programs.gnome-terminal.enable = true;
   environment.shells = with pkgs; [ zsh ];
@@ -76,7 +85,7 @@
   users.users = {
     ${user} = {
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
-      initialPassword = "xersin";
+      initialPassword = "12345";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
       ];
@@ -100,5 +109,5 @@
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "24.05";
+  system.stateVersion = "23.05";
 }

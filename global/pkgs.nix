@@ -24,6 +24,7 @@
     whois
     traceroute
     wget
+    tree
     curl
     git
     bat
