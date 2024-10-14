@@ -55,6 +55,21 @@
          ./global/home/services/displaylink.nix
         ];
       };
+
+      leandro-nixos = nixpkgs.lib.nixosSystem {
+        specialArgs =
+        let
+          user = "leandro";
+          gitName = "XLordPlatypus";
+        in { inherit inputs gitName user; }; # Pass flake inputs to our config
+        modules = [
+         ({ config, pkgs, ... }: { nixpkgs.overlays = [
+         overlay-unstable
+         ]; })
+         ./global/configuration.nix
+         ./global/home/services/displaylink.nix
+        ];
+      };
     };
   };
 }
