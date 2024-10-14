@@ -6,6 +6,8 @@
     inputs.home-manager.nixosModules.home-manager
     ../hosts/${user}-nixos/hardware-configuration.nix
     ./pkgs.nix
+    ./virtualisation.nix
+    ./services.nix
   ];
 
   nixpkgs = {
@@ -87,8 +89,6 @@
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       initialPassword = "12345";
       isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-      ];
       extraGroups = [ "networkmanager" "wheel" "docker" ];
       shell = pkgs.zsh;
     };
