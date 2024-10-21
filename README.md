@@ -49,9 +49,21 @@ nix-env -iA nixos.git
 git clone https://github.com/Francesco070/FraLe-NixOS.git
 
 cp /etc/nixos/hardware-configuration.nix /home/<user>/FraLe-NixOS/hosts/<user>-nixos/hardware-configuration.nix
+```
 
+Delete the previous installed Git phg:
+
+```shell
+nix-env -q
+# output: git-2.44.1
+
+nix-env -e
+```
+
+Now rebuild your system:
+
+```shell
 sudo nixos-rebuild switch --flake .#<user>-nixos
-
 ```
 
 ## Other Commands
