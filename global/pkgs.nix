@@ -35,8 +35,6 @@
     nodePackages.pnpm
     libreoffice
     podman-compose
-    jetbrains.phpstorm
-    jetbrains-toolbox
     discord
     flatpak
     gnome.gnome-software

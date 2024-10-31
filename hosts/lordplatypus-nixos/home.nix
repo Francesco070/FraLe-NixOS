@@ -4,7 +4,6 @@
   imports = [
     ./gnome.nix
     ./programs/git.nix
-    ./programs/vscode.nix
   ];
 
   nixpkgs = {
@@ -27,20 +26,14 @@
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.user-themes
     pkgs.unstable.gnomeExtensions.noannoyance-fork
-    pkgs.fira-code
-    pkgs.unstable.jetbrains.phpstorm
-    (pkgs.php82.buildEnv {
-      extensions = ({ enabled, all }: enabled ++ (with all; [
-        xdebug
-      ]));
-      extraConfig = ''
-        memory_limit = 2G
-        xdebug.mode=coverage
-      '';
-    })
-    pkgs.unstable.symfony-cli
-    pkgs.php82Packages.composer
-  ]; #test
+    pkgs.unstable.godot_4
+    pkgs.llvmPackages_19.libcxxClang
+    pkgs.zed-editor
+    pkgs.raylib
+    pkgs.cmake
+    pkgs.logseq
+    pkgs.brave
+  ];
 
   programs = {
     home-manager.enable = true;

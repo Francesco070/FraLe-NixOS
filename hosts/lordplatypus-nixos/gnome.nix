@@ -6,8 +6,8 @@
         favorite-apps = [
           "org.gnome.Console.desktop"
           "org.gnome.Nautilus.desktop"
-          "firefox.desktop"
-          "phpstorm.desktop"
+          "brave.desktop"
+          "zed-editor.desktop"
         ];
 
         disable-user-extensions = false;
@@ -32,7 +32,7 @@
 
 
       "org/gnome/shell/extensions/dash-to-dock" = {
-        dock-position = "LEFT";
+        dock-position = "MIDDLE";
         extend-height = true;
         dock-fixed = true;
         dash-max-icon-size = 32;
