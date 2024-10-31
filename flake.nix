@@ -56,11 +56,11 @@
         ];
       };
 
-      leandro-nixos = nixpkgs.lib.nixosSystem {
+      lordplatypus-nixos = nixpkgs.lib.nixosSystem {
         specialArgs =
         let
-          user = "leandro";
-          gitName = "XLordPlatypus";
+          user = "Cain";
+          gitName = "Ciaphas Cain";
         in { inherit inputs gitName user; }; # Pass flake inputs to our config
         modules = [
          ({ config, pkgs, ... }: { nixpkgs.overlays = [
