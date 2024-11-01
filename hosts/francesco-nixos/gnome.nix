@@ -7,6 +7,7 @@
           "org.gnome.Console.desktop"
           "org.gnome.Nautilus.desktop"
           "firefox.desktop"
+          "thunderbird.desktop"
           "phpstorm.desktop"
         ];
 

@@ -23,6 +23,7 @@
   home.packages = [
     pkgs.chromium
     pkgs.firefox
+    pkgs.thunderbird
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.clipboard-indicator
     pkgs.gnomeExtensions.tray-icons-reloaded
