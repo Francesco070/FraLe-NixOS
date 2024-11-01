@@ -5,7 +5,7 @@
     ./gnome.nix
     ./programs/git.nix
     ./programs/vscode.nix
-    ../../global/home/programs/bash.nix
+    ./programs/kitty.nix
   ];
 
   nixpkgs = {
@@ -22,6 +22,7 @@
 
   home.packages = [
     pkgs.chromium
+    pkgs.firefox
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.clipboard-indicator
     pkgs.gnomeExtensions.tray-icons-reloaded
