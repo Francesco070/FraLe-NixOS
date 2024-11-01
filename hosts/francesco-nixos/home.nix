@@ -40,7 +40,7 @@
     })
     pkgs.unstable.symfony-cli
     pkgs.php82Packages.composer
-  ]; #test
+  ];
 
   programs = {
     home-manager.enable = true;

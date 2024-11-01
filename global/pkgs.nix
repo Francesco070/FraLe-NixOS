@@ -16,6 +16,8 @@
     gnome-maps
     gnome-music
     gnome-weather
+    gnome-software
+    gnome-tweaks
   ];
 
   environment.systemPackages = with pkgs; [
@@ -37,8 +39,7 @@
     podman-compose
     discord
     flatpak
-    gnome.gnome-software
-    gnome.gnome-tweaks
+    jetbrains-toolbox
   ];
 }
 
