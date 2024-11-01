@@ -4,6 +4,7 @@
   imports = [
     ./gnome.nix
     ./programs/git.nix
+    ../../global/home/programs/bash.nix
   ];
 
   nixpkgs = {

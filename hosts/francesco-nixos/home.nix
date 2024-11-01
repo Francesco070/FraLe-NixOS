@@ -5,6 +5,7 @@
     ./gnome.nix
     ./programs/git.nix
     ./programs/vscode.nix
+    ../../global/home/programs/bash.nix
   ];
 
   nixpkgs = {
