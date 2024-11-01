@@ -73,3 +73,10 @@ delete system generations older than 7 days:
 ```shell
 nix-collect-garbage --delete-older-than 7d
 ```
+
+## Makefile
+
+```shell
+# username des NixOS-Rechner und des nixos host ordner soll der selbe sein
+make rebuild USER=<username>
+```
