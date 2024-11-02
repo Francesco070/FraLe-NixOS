@@ -53,7 +53,6 @@
     gtk = {
       enable = true;
       catppuccin = {
-        enable = true;
         tweaks = [ "rimless" ];
         size = "compact";
         icon = {
@@ -61,7 +60,6 @@
           accent = "blue";
           flavor = "frappe";
         };
-        gnomeShellTheme = true;
       };
 
       gtk3.extraConfig = {
