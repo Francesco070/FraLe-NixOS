@@ -61,7 +61,9 @@
   time.timeZone = "Europe/Zurich";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "de_CH.UTF-8";
+  i18n = {
+    defaultLocale = "en_GB.UTF-8";
+    };
 
   # Configure console keymap
   console.keyMap = "sg";
