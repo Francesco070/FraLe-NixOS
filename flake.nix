@@ -59,7 +59,7 @@
       lordplatypus-nixos = nixpkgs.lib.nixosSystem {
         specialArgs =
         let
-          user = "Cain";
+          user = "cain";
           gitName = "Ciaphas Cain";
         in { inherit inputs gitName user; }; # Pass flake inputs to our config
         modules = [
