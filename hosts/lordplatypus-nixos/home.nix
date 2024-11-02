@@ -27,12 +27,12 @@
     pkgs.gnomeExtensions.user-themes
     pkgs.unstable.gnomeExtensions.noannoyance-fork
     pkgs.unstable.godot_4
-    pkgs.llvmPackages_19.libcxxClang
-    pkgs.zed-editor
-    pkgs.raylib
-    pkgs.cmake
-    pkgs.logseq
-    pkgs.brave
+    pkgs.unstable.llvmPackages_19.libcxxClang
+    pkgs.unstable.zed-editor
+    pkgs.unstable.raylib
+    pkgs.unstable.cmake
+    pkgs.unstable.logseq
+    pkgs.unstable.brave
   ];
 
   programs = {
